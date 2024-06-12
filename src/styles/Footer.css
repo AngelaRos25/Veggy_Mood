@@ -1,6 +1,10 @@
 footer {
-  background-color: rgb(253, 195, 109);
-  height: 5%;
+  position: fixed;
+  bottom: 0;
+  background-color: #E8E7E7;
+  height: 4%;
+  width: 100%;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,5 +12,6 @@ footer {
 
 footer p {
   margin: 0;
+  font-size: 14px;
   font-weight: bold;
 }

@@ -25,7 +25,10 @@ function Recipes() {
 
   return (
     <>
-      <div className="box-recipes">
+      <div className="popular-recipes">
+        <h1>Popular Recipes</h1>
+      </div>
+      <div className="box">
         {getRecipe.map((recipe) => {
           return (
             <div key={recipe.id} className="recipe-container">

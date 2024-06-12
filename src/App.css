@@ -3,10 +3,10 @@
 }
 
 .body-cont {
-  height: 57%;
-  background-color: rgb(255, 242, 167);
+  height: 99%;
+  background-color: #203D1C;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }

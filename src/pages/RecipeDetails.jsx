@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import { TiArrowBack } from "react-icons/ti";
+import { BsArrowLeftSquareFill } from "react-icons/bs";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -26,32 +26,44 @@ function RecipeDetails() {
   return (
     <>
       <Header />
-      <div className="title-recipe">
-        <h1>{details.title}</h1>
-      </div>
-      <div className="body-recipe">
-        <div className="img-box">
-          <Link to={"/"}>
-            <TiArrowBack className="return" />
-          </Link>
-          <img className="image" src={details.image} alt={details.recipe} />
-        </div>
-        <div className="info-recipe">
-          <div className="ingredient">
-            <h2>Ingredients:</h2>
-            <ol>
-              {details.extendedIngredients?.map((ingredient) => (
-                <li key={ingredient.id}>{ingredient.original}</li>
-              ))}
-            </ol>
-          </div>
-          <div className="instruction">
-            <h2>Instructions:</h2>
-            <div className="text-instructions">
-              {details.instructions}
+      <div className="main-container">
+        <div className="box-details">
+          <div className="title-img">
+            <div className="title-recipe">
+              <h1>{details.title}</h1>
             </div>
-
+            <div className="img-box">
+              <img className="image" src={details.image} alt={details.recipe} />
+            </div>
           </div>
+          <div className="body-recipe">
+            <div className="summary-recipe">
+              <p dangerouslySetInnerHTML={{ __html: details.summary}}></p>
+            </div>
+            <div className="info-recipe">
+              <div className="ingredient">
+                <h2>Ingredients:</h2>
+                <ol>
+                  {details.extendedIngredients?.map((ingredient) => (
+                    <li key={ingredient.id}>{ingredient.original}</li>
+                  ))}
+                </ol>
+              </div>
+              <div className="instruction">
+                <h2>Instructions:</h2>
+                <div dangerouslySetInnerHTML={{ __html: details.instructions }} className="text-instructions"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="box-return">
+          <ul>
+            <li>
+              <Link to={"/Veggy_Mood/"}>
+                <BsArrowLeftSquareFill />
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
       <Footer />

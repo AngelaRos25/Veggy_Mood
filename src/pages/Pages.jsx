@@ -8,7 +8,7 @@ function Pages() {
     <Routes>
       <Route path="/Veggy_Mood/" element={<Home />} />
       <Route path="/searched/:search" element={<Searched />} />
-      <Route path="/recipedetails/:name" element={<RecipeDetails />} />
+      <Route path="/RecipeDetails/:name" element={<RecipeDetails />} />
     </Routes>
   )
 }

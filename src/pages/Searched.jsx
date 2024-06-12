@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
-import SearchBar from '../components/SearchBar';
+import CentralHeader from '../components/CentralHeader';
 import Footer from '../components/Footer'
 
 /*pagina per le ricette cercate*/
@@ -31,9 +31,9 @@ function Searched() {
   return (
     <>
       <Header />
-      <SearchBar />
+      <CentralHeader/>
       <div className='body-cont'>
-        <div className="box-recipes">
+        <div className="box">
           {searchedRecipes.map((item) => {
             return (
               <div key={item.id} className="recipe-container">

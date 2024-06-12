@@ -1,61 +1,125 @@
-.title-recipe {
+.main-container {
   display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  top: 15%;
-  margin: 0;
-}
-
-.title-recipe  h1 {
-  text-align: center;
-  font-weight: 900;
-  font-size: 2em;
-  line-height: 35px;
-  margin: 0;
-}
-
-.body-recipe {
-  height: 650px;
-  background-color: rgb(255, 242, 167);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  height: 99%;
+  background-color: #203D1C;
+  z-index: 999;
+}
+
+/* box recipe details */
+.box-details {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.878);
+  backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  width: 70%;
+  height: 75%;
+}
+
+.title-img {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+.title-recipe {
+  width: 55%;
+  height: 150px;
+  margin: 0;
+}
+
+.title-recipe h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .img-box {
+  width: 40%;
   position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  right: 5%;
+  top: -20px;
 }
 
 .image {
-  width: 60%;
-  border-radius: 20%;
-  padding: 5px;
+  width: 100%;
+  border-radius: 10%;
 }
+
+
+/* summary recipe */
+.summary-recipe {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  width: 99%;
+  height: 165px;
+  top: 16%;
+}
+
+.summary-recipe p {
+  font-weight: 700;
+  font-size: 15px;
+  width: 62%;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.878);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 16px;
+  backdrop-filter: blur(6.4px);
+  overflow: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.summary-recipe a {
+  color: black;
+}
+
+.summary-recipe p::-webkit-scrollbar {
+  width: 10px;
+}
+
+.summary-recipe p::-webkit-scrollbar-track {
+  background-color: black;
+  border-radius: 10px;
+}
+
+.summary-recipe p::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
 
 .info-recipe {
-  max-height: 98%;
-  width: 95%;
+  display: flex;
+  flex-direction: row;
+  height: 250px;
   padding: 10px;
   font-weight: 700;
+  overflow: auto;
 }
 
+/* box ingredient */
 .ingredient {
   text-wrap: wrap;
-  height: 50%;
-  background-color: rgb(253, 195, 109);
+  width: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.878);
+  backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
   border-radius: 30px;
   padding: 5px;
-  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .ingredient h2 {
@@ -67,16 +131,25 @@
 .ingredient ol {
   display: grid;
   grid-template-columns: auto auto;
-  width: 90%;
+  align-content: center;
+  width: 98%;
   max-height: 150px;
-  column-gap: 10px;
-  row-gap: 5px;
+  column-gap: 2px;
+  row-gap: 2px;
   margin: 5px;
   padding-left: 10px;
   padding-right: 10px;
   overflow: auto;
 }
 
+.ingredient li {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 15px;
+  padding: 0;
+}
+
+/*ingredient scroll*/
 .ingredient ol::-webkit-scrollbar {
   width: 10px;
 }
@@ -87,35 +160,38 @@
 }
 
 .ingredient ol::-webkit-scrollbar-thumb {
-  background-color: rgb(253, 135, 7);
+  background-color: white;
   border-radius: 10px;
 }
 
-.ingredient li {
-  list-style-type: disc;
-  list-style-position: inside;
-  font-size: 15px;
-  padding: 0;
-}
 
+/* instruction */
 .instruction {
-  background-color: rgb(253, 195, 109);
+  width: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.878);
+  backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
   padding: 5px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .text-instructions {
   width: 98%;
-  max-height: 150px;
+  max-height: 180px;
   position: relative;
   overflow: auto;
   padding: 2px;
 }
 
+/* instructions scroll */
 .text-instructions::-webkit-scrollbar {
   width: 10px;
 }
@@ -126,58 +202,35 @@
 }
 
 .text-instructions::-webkit-scrollbar-thumb {
-  background-color: rgb(253, 135, 7);
+  background-color: white;
   border-radius: 10px;
 }
 
-
-.return {
-  font-size: 50px;
-}
-
-@media (min-width: 900px) {
-.title-recipe h1{
-  width: 50%;
-  font-size: 2.5em;
+/* return icon */
+.box-return {
   position: relative;
-  top: 30%;
+  display: flex;
+  align-items: end;
+  height: 100%;
+  width: 55px;
+  top: -5%;
+  right: 2%;
 }
 
-  .body-recipe {
-    height: 57%;
-    flex-direction: row; 
-  }
+.box-return ul {
+  padding: 0;
+}
 
-  .image {
-    width: 80%;
-  }
-
-  .img-box {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .info-recipe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    padding: 5px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .ingredient {
-    margin-top: 15px;
-    max-width: 750px;
-  }
-
-  .instruction {
-    max-width: 850px;
-    max-height: 170px;
-  }
-
+.box-return li {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  margin: 5px;
+  margin-bottom: 15px;
+  list-style: none;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 2px;
+  cursor: pointer;
 }
