@@ -11,7 +11,7 @@ function Header() {
       <div className="home-box">
         <ul>
           <li>
-            <Link to={"/Veggy_Mood/"}>
+            <Link to={"/"}>
               <FaHome />
             </Link>
           </li>
