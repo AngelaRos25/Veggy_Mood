@@ -37,7 +37,7 @@ function Searched() {
           {searchedRecipes.map((item) => {
             return (
               <div key={item.id} className="recipe-container">
-                <Link to={'/RecipeDetails/' + item.id}>
+                <Link to={'/Veggy_Mood/RecipeDetails/' + item.id}>
                   <img className="recipe-img" src={item.image} alt="" />
                   <h2>{item.title}</h2>
                 </Link>

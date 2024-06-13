@@ -32,7 +32,7 @@ function Recipes() {
         {getRecipe.map((recipe) => {
           return (
             <div key={recipe.id} className="recipe-container">
-              <Link to={'/RecipeDetails/' + recipe.id}>
+              <Link to={'RecipeDetails/' + recipe.id}>
                 <img className="recipe-img" src={recipe.image} alt="" />
                 <h2>{recipe.title}</h2>
               </Link>
