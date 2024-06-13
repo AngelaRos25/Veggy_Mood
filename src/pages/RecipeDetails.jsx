@@ -59,7 +59,7 @@ function RecipeDetails() {
         <div className="box-return">
           <ul>
             <li>
-              <Link to={"/"}>
+              <Link to={"/Veggy_Mood/"}>
                 <BsArrowLeftSquareFill />
               </Link>
             </li>
