@@ -4,7 +4,7 @@
 
 .popular-recipes h1 {
   margin: 0;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .box {
@@ -33,8 +33,8 @@
 }
 
 .recipe-container {
-  width: 17%;
-  height: 50%;
+  width: 44%;
+  height: 30%;
   margin: 10px;
   border-radius: 25%;
   padding-top: 10px;
@@ -58,7 +58,7 @@
   margin: 0;
   padding: 5px;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 15px;
   text-align: center;
 }
@@ -78,3 +78,22 @@
   width: 140px;
   font-size: 15px;
 }
+
+
+
+@media (min-width: 900px) {
+
+.popular-recipes h1 {
+  font-size: 45px;
+}
+
+.recipe-container {
+  width: 17%;
+  height: 50%;
+}
+
+
+.recipe-container h2 {
+  font-size: 13px;
+}
+} 

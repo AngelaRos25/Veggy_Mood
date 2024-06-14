@@ -3,6 +3,7 @@ import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { TbArrowBadgeDownFilled } from "react-icons/tb";
 
+import image from '../image/verdura-di-stagione.jpg'
 import logo from '../image/logo.png';
 import '../styles/CentralHeader.css';
 
@@ -21,6 +22,9 @@ function CentralHeader() {
         <img src={logo} alt="" />
       </div>
       <div className='box-header'>
+        <div className='background-img'>
+          <img src={image} alt="" />
+        </div>
         <div className='text'>
           <h1>FRESH VEGGIE RECIPES</h1>
           <p>Are you looking for healthy dishes?
