@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
+import vegan from '../image/icon/vegan.png';
+import vegetarian from '../image/icon/vegetarian.png';
+import gluten from '../image/icon/gluten-free.png';
+import dairy from '../image/icon/dairy-free.png';
+import healthy from '../image/icon/heartbeat.png'
+
+
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -23,37 +30,69 @@ function RecipeDetails() {
     getDetails();
   }, [params.name]);
 
+  // const badge = vegan || glutenFree || dairyFree;
   return (
-    <>
+    <div className="app2">
       <Header />
-      <div className="main-container">
-        <div className="box-details">
-          <div className="title-img">
-            <div className="title-recipe">
-              <h1>{details.title}</h1>
-            </div>
-            <div className="img-box">
-              <img className="image" src={details.image} alt={details.recipe} />
+      <div className="box-details">
+        <div className="header-recipe-box">
+          <div className="box-title-badge">
+            <h1>{details.title}</h1>
+            <div className="badge">
+              <ul>
+                {details.vegan && (
+                  <div>
+                    <img src={vegan} alt="" />
+                    <li>Vegan</li>
+                  </div>
+                )}
+                {details.vegetarian && (
+                  <div>
+                    <img src={vegetarian} alt="" />
+                    <li>Vegetarian</li>
+                  </div>
+                )}
+                {details.glutenFree && (
+                  <div>
+                    <img src={gluten} alt="" />
+                    <li>Gluten Free</li>
+                  </div>
+                )}
+                {details.dairyFree && (
+                  <div>
+                    <img src={dairy} alt="" />
+                    <li>Dairy Free</li>
+                  </div>
+                )}
+                {details.veryHealthy && (
+                  <div>
+                    <img src={healthy} alt="" />
+                    <li>Very Healthy</li>
+                  </div>
+                )}
+              </ul>
             </div>
           </div>
-          <div className="body-recipe">
+
+          <img className="img-recipe" src={details.image} alt="" />
+        </div>
+        <div className="body-recipe">
+          <div className="box-summ-ing">
             <div className="summary-recipe">
-              <p dangerouslySetInnerHTML={{ __html: details.summary}}></p>
+              <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
             </div>
-            <div className="info-recipe">
-              <div className="ingredient">
-                <h2>Ingredients:</h2>
-                <ol>
-                  {details.extendedIngredients?.map((ingredient) => (
-                    <li key={ingredient.id}>{ingredient.original}</li>
-                  ))}
-                </ol>
-              </div>
-              <div className="instruction">
-                <h2>Instructions:</h2>
-                <div dangerouslySetInnerHTML={{ __html: details.instructions }} className="text-instructions"></div>
-              </div>
+            <div className="ingredient">
+              <h2>Ingredients:</h2>
+              <ol>
+                {details.extendedIngredients?.map((ingredient) => (
+                  <li key={ingredient.id}>{ingredient.original}</li>
+                ))}
+              </ol>
             </div>
+          </div>
+          <div className="instructions">
+            <h2>Instructions:</h2>
+            <p dangerouslySetInnerHTML={{ __html: details.instructions }} className="text-instructions"></p>
           </div>
         </div>
         <div className="box-return">
@@ -67,7 +106,7 @@ function RecipeDetails() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

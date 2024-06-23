@@ -5,7 +5,7 @@ import { TbArrowBadgeDownFilled } from "react-icons/tb";
 
 import image from '../image/verdura-di-stagione.jpg'
 import logo from '../image/logo.png';
-import '../styles/CentralHeader.css';
+import '../styles/SearchBar.css';
 
 function CentralHeader() {
   const [input, setInput] = useState("");
@@ -17,7 +17,7 @@ function CentralHeader() {
   }
 
   return (
-    <div className='central-header'>
+    <div id='section-1' className='central-header'>
       <div className='box-img'>
         <img src={logo} alt="" />
       </div>
@@ -40,9 +40,11 @@ function CentralHeader() {
         </div>
       </div>
       <div className='arrow'>
-        <TbArrowBadgeDownFilled/>
+        <a href="#section-2">
+          <TbArrowBadgeDownFilled />
+        </a>
       </div>
-      
+
     </div>
   )
 }

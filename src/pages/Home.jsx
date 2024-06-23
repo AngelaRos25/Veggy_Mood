@@ -1,4 +1,4 @@
-import CentralHeader from '../components/CentralHeader';
+import SearchBar from '../components/SearchBar';
 import Recipes from '../components/Recipes';
 import Header from '../components/Header';
 import Footer from '../components/Footer'
@@ -7,8 +7,8 @@ function Home() {
   return (
     <>
       <Header />
-      <CentralHeader />
-      <div className='body-cont'>
+      <SearchBar />
+      <div id='section-2' className='body-cont'>
         <Recipes></Recipes>
       </div>
       <Footer></Footer>

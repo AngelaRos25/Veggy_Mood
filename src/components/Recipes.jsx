@@ -1,7 +1,13 @@
 import axios from "axios";
-import "../styles/Recipes.css";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+
+
+// import icon
+import { TbArrowBadgeUpFilled } from "react-icons/tb";
+
+// import style
+import "../styles/Recipes.css";
 
 
 function Recipes() {
@@ -42,6 +48,11 @@ function Recipes() {
       </div>
       <div className='button-box'>
         <button onClick={() => setNumber(number + 10)} className='search-button  button2'>Load More</button>
+      </div>
+      <div className="arrow arrow-recipe">
+        <a href="#section-1">
+          <TbArrowBadgeUpFilled />
+        </a>
       </div>
     </>
   )

@@ -2,8 +2,9 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
-import CentralHeader from '../components/CentralHeader';
-import Footer from '../components/Footer'
+import SearchBar from '../components/SearchBar';
+import Footer from '../components/Footer';
+import { TbArrowBadgeUpFilled } from "react-icons/tb";
 
 /*pagina per le ricette cercate*/
 
@@ -31,8 +32,13 @@ function Searched() {
   return (
     <>
       <Header />
-      <CentralHeader/>
-      <div className='body-cont'>
+      <SearchBar />
+      <div id='section-2' className='body-cont'>
+        <div>
+          <h1>Recipes with&nbsp;
+            <span style={{ color: "red" }}>{params.search}</span>
+          </h1>
+        </div>
         <div className="box">
           {searchedRecipes.map((item) => {
             return (
@@ -47,6 +53,11 @@ function Searched() {
         </div>
         <div className='button-box'>
           <button onClick={() => setNumber(number + 10)} className='search-button  button2'>Load More</button>
+        </div>
+        <div className="arrow">
+          <a href="#section-1">
+            <TbArrowBadgeUpFilled />
+          </a>
         </div>
       </div>
       <Footer></Footer>

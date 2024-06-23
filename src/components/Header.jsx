@@ -1,4 +1,6 @@
 import "../styles/Header.css";
+
+// importo icon
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
