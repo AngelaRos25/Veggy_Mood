@@ -1,7 +1,7 @@
 .content-header {
   position: absolute;
   width: 100%;
-  height: 80%;
+  height: 18%;
 }
 
 
@@ -56,6 +56,9 @@
 }
 
 @media (min-width: 900px) {
+  .content-header {
+    height: 90%
+  }
 
   .contact-box {
     top: 40%;
