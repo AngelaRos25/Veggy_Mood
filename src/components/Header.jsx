@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 
 function Header() {
   return (
-    <div className='content-header'>
+    <>
       <div className="home-box">
         <ul>
           <li>
@@ -36,7 +36,7 @@ function Header() {
         </ul>
 
       </div>
-    </div>
+    </>
   )
 }
 
