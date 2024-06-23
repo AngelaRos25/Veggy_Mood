@@ -18,25 +18,27 @@ function CentralHeader() {
 
   return (
     <div id='section-1' className='central-header'>
-      <div className='box-img'>
-        <img src={logo} alt="" />
-      </div>
       <div className='box-header'>
-        <div className='background-img'>
-          <img src={image} alt="" />
+        <div className='box-img'>
+          <img src={logo} alt="" />
         </div>
-        <div className='text'>
-          <h1>FRESH VEGGIE RECIPES</h1>
-          <p>Are you looking for healthy dishes?
-            Here, you will find them. Start now by typing your ingredients in the searchbar. </p>
-        </div>
-        <div className="submit-box">
-          <form className='search-form' onSubmit={submitHandler}>
-            <input className='search-bar' onChange={(e) => setInput(e.target.value)} value={input} type="text" name="ingredient" placeholder='Type here your ingredient!' />
-            <button className='search-button'>
-              <FaSearch></FaSearch>
-            </button>
-          </form>
+        <div className='box-title-search'>
+          <div className='background-img'>
+            <img src={image} alt="" />
+          </div>
+          <div className='text'>
+            <h1>FRESH VEGGIE RECIPES</h1>
+            <p>Are you looking for healthy dishes?
+              Here, you will find them. Start now by typing your ingredients in the searchbar. </p>
+          </div>
+          <div className="submit-box">
+            <form className='search-form' onSubmit={submitHandler}>
+              <input className='search-bar' onChange={(e) => setInput(e.target.value)} value={input} type="text" name="ingredient" placeholder='Type here your ingredient!' />
+              <button className='search-button'>
+                <FaSearch></FaSearch>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <div className='arrow'>
