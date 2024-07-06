@@ -36,23 +36,19 @@
 .contact-box li,
 .home-box li {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   margin-bottom: 15px;
   list-style: none;
   text-align: center;
-  font-size: 35px;
-  justify-content: center;
-  align-items: center;
+  font-size: 38px;
   padding: 2px;
   cursor: pointer;
-}
-
-.contact-box li a,
-.home-box li a {
   background-color: white;
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 @media (min-width: 900px) {
@@ -73,10 +69,6 @@
     font-size: 40px;
   }
 
-  .contact-box li a,
-  .home-box li a {
-    width: 45px;
-    height: 45px;
-  }
+
 
 }

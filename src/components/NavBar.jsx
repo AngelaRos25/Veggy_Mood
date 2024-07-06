@@ -12,11 +12,11 @@ function Header() {
     <>
       <div className="home-box">
         <ul>
-          <li>
-            <Link to={"/Veggy_Mood/"}>
+          <Link to={"/Veggy_Mood/"}>
+            <li>
               <FaHome />
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
 
       </div>
@@ -24,13 +24,13 @@ function Header() {
       <div className="contact-box">
         <ul>
           <li>
+            <FaGithub />
             <a href="https://github.com/Giangy25?tab=repositories" target='blank'>
-              <FaGithub />
             </a>
           </li>
           <li>
+            <FaLinkedin />
             <a href="https://www.linkedin.com/in/angela-rosace-744925291/" target='blank'>
-              <FaLinkedin />
             </a>
           </li>
         </ul>

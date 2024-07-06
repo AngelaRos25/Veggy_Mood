@@ -28,13 +28,13 @@ function RecipeDetails() {
 
   return (
     <div className="app2">
-      <NavBar/>
+      <NavBar />
       <div className="principal-box">
         <div className="box-details">
           <div className="header-recipe-box">
             <div className="box-title-badge">
               <h1>{details.title}</h1>
-              <Badge 
+              <Badge
                 vegan={details.vegan}
                 vegetarian={details.vegetarian}
                 glutenFree={details.glutenFree}
@@ -65,11 +65,11 @@ function RecipeDetails() {
           </div>
           <div className="box-return">
             <ul>
-              <li>
-                <Link to={"/Veggy_Mood/"}>
+              <Link to={"/Veggy_Mood/"}>
+                <li>
                   <BsArrowLeftSquareFill />
-                </Link>
-              </li>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
