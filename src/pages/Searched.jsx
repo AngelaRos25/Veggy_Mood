@@ -1,13 +1,16 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+
+// componenti
 import NavBar from '../components/NavBar';
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
+
+// icon
 import { TbArrowBadgeUpFilled } from "react-icons/tb";
 
-/*pagina per le ricette cercate*/
-
+//pagina per le ricette cercate
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   const [number, setNumber] = useState(10);

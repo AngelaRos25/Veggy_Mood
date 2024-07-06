@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+
+// icon
 import { BsArrowLeftSquareFill } from "react-icons/bs";
+
+// componenti
 import Badge from "../components/Badge";
-
-
-
 import NavBar from '../components/NavBar';
 import Footer from "../components/Footer";
 
+// stile
 import '../styles/RecipeDetails.css'
 
 function RecipeDetails() {

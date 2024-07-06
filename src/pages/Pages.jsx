@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+
+// componenti
 import Home from "./Home";
 import Searched from "./Searched";
 import RecipeDetails from "./RecipeDetails";

@@ -109,12 +109,12 @@
 }
 
 .box {
-  height: 55%;
+  height: 65%;
 }
 
 .box-recipe {
   width: 18%;
-  height: 65%;
+  height: 58%;
   margin: 10px;
 }
 
@@ -129,6 +129,10 @@
 
 .recipe-container h2 {
   font-size: 15px;
+}
+
+.arrow-recipe{
+  height: 5%;
 }
 } 
 

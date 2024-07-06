@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// componenti
 import Badge from "./Badge";
 
 

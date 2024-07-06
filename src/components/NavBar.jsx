@@ -1,6 +1,7 @@
+// stile
 import "../styles/NavBar.css";
 
-// importo icon
+//icon
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";

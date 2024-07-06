@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+
+//icon
+import { FaSearch } from 'react-icons/fa';
 import { TbArrowBadgeDownFilled } from "react-icons/tb";
 
+//immagini
 import image from '../image/verdura-di-stagione.jpg'
 import logo from '../image/logo.png';
+
+// stile
 import '../styles/SearchBar.css';
 
 function CentralHeader() {

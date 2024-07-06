@@ -1,3 +1,4 @@
+// componenti
 import SearchBar from '../components/SearchBar';
 import Recipes from '../components/Recipes';
 import NavBar from '../components/NavBar';

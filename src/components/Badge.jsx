@@ -1,6 +1,7 @@
-// css
+//stile
 import '../styles/Badge.css';
-// images
+
+//immagini
 import veg from '../image/icon/vegan.png';
 import vegetarianIco from '../image/icon/vegetarian.png';
 import gluten from '../image/icon/gluten-free.png';

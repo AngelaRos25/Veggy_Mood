@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
+
+// componenti
 import Card from "./Card";
 
-
-// import icon
+//icon
 import { TbArrowBadgeUpFilled } from "react-icons/tb";
 
-// import style
+//stile
 import "../styles/Recipes.css";
 
 
