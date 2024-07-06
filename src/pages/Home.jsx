@@ -1,12 +1,12 @@
 import SearchBar from '../components/SearchBar';
 import Recipes from '../components/Recipes';
-import Header from '../components/Header';
+import NavBar from '../components/NavBar';
 import Footer from '../components/Footer'
 
 function Home() {
   return (
     <>
-      <Header />
+      <NavBar />
       <SearchBar />
       <div id='section-2' className='body-cont'>
         <Recipes></Recipes>

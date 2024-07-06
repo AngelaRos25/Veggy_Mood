@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Header from '../components/Header';
+import NavBar from '../components/NavBar';
 import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import { TbArrowBadgeUpFilled } from "react-icons/tb";
@@ -31,7 +31,7 @@ function Searched() {
 
   return (
     <>
-      <Header />
+      <NavBar />
       <SearchBar />
       <div id='section-2' className='body-cont'>
         <div>

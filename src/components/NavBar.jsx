@@ -1,4 +1,4 @@
-import "../styles/Header.css";
+import "../styles/NavBar.css";
 
 // importo icon
 import { Link } from "react-router-dom";

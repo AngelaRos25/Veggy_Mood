@@ -11,10 +11,19 @@ function CentralHeader() {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
+
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate('searched/' + input);
+    navigate(`/Veggy_Mood/searched/${input}`);
   }
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
 
   return (
     <div id='section-1' className='central-header'>
@@ -34,8 +43,8 @@ function CentralHeader() {
           <div className="submit-box">
             <form className='search-form' onSubmit={submitHandler}>
               <input className='search-bar' onChange={(e) => setInput(e.target.value)} value={input} type="text" name="ingredient" placeholder='Type here your ingredient!' />
-              <button className='search-button'>
-                <FaSearch></FaSearch>
+              <button className='search-button' onClick={scrollToBottom}>
+                  <FaSearch />
               </button>
             </form>
           </div>

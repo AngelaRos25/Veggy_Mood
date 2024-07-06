@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import Card from "./Card";
 
 
 // import icon
@@ -37,11 +37,13 @@ function Recipes() {
       <div className="box">
         {getRecipe.map((recipe) => {
           return (
-            <div key={recipe.id} className="recipe-container">
-              <Link to={'RecipeDetails/' + recipe.id}>
-                <img className="recipe-img" src={recipe.image} alt="" />
-                <h2>{recipe.title}</h2>
-              </Link>
+            <div key={recipe.id} className="box-recipe">
+              <Card key={recipe.id} title={recipe.title} image={recipe.image} id={recipe.id}
+              vegan={recipe.vegan}
+              vegetarian={recipe.vegetarian}
+              glutenFree={recipe.glutenFree}
+              dairyFree={recipe.dairyFree}
+              veryHealthy={recipe.veryHealthy}/>
             </div>
           )
         })}

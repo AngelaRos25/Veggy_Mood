@@ -4,11 +4,18 @@
   overflow: auto;
 }
 
+.principal-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .box-details {
   position: relative;
 
-  width: 70%;
-  margin: auto;
+  width: 80%;
   margin-bottom: 45%;
   margin-top: 25%;
 
@@ -36,23 +43,6 @@
   width: 70%;
 }
 
-/* badge principal info */
-.badge ul {
-  padding-left: 5px;
-  padding-right: 5px;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  font-weight: bold;
-}
-
-.badge div {
-  margin: auto;
-}
-
-.badge img{
-  width: 50px;
-}
 /* body info recipe */
 .body-recipe {
   display: flex;
@@ -104,30 +94,37 @@
 .box-return li {
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   list-style: none;
-  background-color: white;
-  font-size: 35px;
-  text-align: center;
-  border-radius: 10px;
+  font-size: 32px;
+  padding: 2px;
 }
 
 .box-return li a {
-  padding: 2px;
-  width: 44px;
-  height: 44px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
 }
 
 @media (min-width: 900px)  {
   .app2 {
     overflow: visible;
   }
-  
-  .box-details {
+
+  .principal-box {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    height: 75%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-details {
+    width: 60%;
+    height: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .header-recipe-box{
@@ -138,6 +135,8 @@
   .box-title-badge {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 65%;
   }
 
@@ -155,12 +154,8 @@
     border-radius: 10px;
   }
 
-  .badge div {
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-  
   .body-recipe {
+    height: 60%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -200,8 +195,9 @@
     margin: 5px;
   }
 
-  .ingredient ol {
-    height: 70%;
+  .ingredient ol, 
+  .instructions p{
+    height: 65%;
     overflow: auto;
   }
   
