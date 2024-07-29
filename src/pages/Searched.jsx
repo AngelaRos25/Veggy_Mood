@@ -1,71 +1,71 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 // componenti
-import NavBar from '../components/NavBar';
-import SearchBar from '../components/SearchBar';
-import Footer from '../components/Footer';
+import MainCont from "../components/MainCont/MainCont";
+import Footer from "../components/Footer/Footer";
+import Card from "../components/Card/Card";
+import Loader from "../components/Loader/Loader";
+import FootButton from "../components/FootButton/FootButton";
 
-// icon
-import { TbArrowBadgeUpFilled } from "react-icons/tb";
-
-//pagina per le ricette cercate
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
-  const [number, setNumber] = useState(10);
   let params = useParams();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    /*chiamo l'api per cercare le ricette nel form*/
     const getSearched = async (name) => {
       try {
-        const api = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_APP_API_KEY}&diet=vegetarian&query=${name}&number=${number}`);
+        const api = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_APP_API_KEY}&addRecipeInformation=true&query=${name}&number=10`);
         const data = api.data;
-        console.log(data)
-        setSearchedRecipes(data.results);
+        console.log(data);
+        setSearchedRecipes(data.results)
       } catch (error) {
-        console.log("opss!, there is an error");
+        console.log("opss!, there is an error!")
       }
     }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
     getSearched(params.search);
-  }, [params.search, number]);
+  }, [params.search]);
 
 
   return (
     <>
-      <NavBar />
-      <SearchBar />
-      <div id='section-2' className='body-cont'>
-        <div>
-          <h1>Recipes with&nbsp;
-            <span style={{ color: "red" }}>{params.search}</span>
-          </h1>
-        </div>
-        <div className="box">
-          {searchedRecipes.map((item) => {
+      <MainCont />
+      <div className="content-box">
+        <h2 className="title">Recipes with&nbsp;
+          <span>{params.search}</span>
+        </h2>
+        {isLoading === true && (
+          <div>
+            <Loader />
+          </div>
+        )}
+        <div className="box-recipe">
+          {isLoading === false && searchedRecipes.map((item) => {
             return (
-              <div key={item.id} className="recipe-container">
-                <Link to={'/Veggy_Mood/RecipeDetails/' + item.id}>
-                  <img className="recipe-img" src={item.image} alt="" />
-                  <h2>{item.title}</h2>
-                </Link>
-              </div>
+              <Card
+                key={item.id}
+                title={item.title}
+                image={item.image}
+                id={item.id}
+                vegan={item.vegan}
+                vegetarian={item.vegetarian}
+                dairyFree={item.dairyFree}
+                glutenFree={item.glutenFree}
+                veryHealthy={item.veryHealthy}
+              />
             )
           })}
         </div>
-        <div className='button-box'>
-          <button onClick={() => setNumber(number + 10)} className='search-button  button2'>Load More</button>
-        </div>
-        <div className="arrow">
-          <a href="#section-1">
-            <TbArrowBadgeUpFilled />
-          </a>
-        </div>
       </div>
-      <Footer></Footer>
+      <FootButton />
+      <Footer />
     </>
   )
 }
 
-export default Searched;
+export default Searched

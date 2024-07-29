@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.badge-box {
+  margin: 10px;
+}
+
+.badge-box li {
+  display: none;
+}
+
+.badge-box img {
+  width: 40px;
+}

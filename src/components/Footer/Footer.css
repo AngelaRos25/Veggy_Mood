@@ -1,0 +1,48 @@
+.footer-box {
+  background-color: #64090a;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  bottom: 0;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.contact-box ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-box a {
+  color: white;
+}
+
+.contact-box li {
+  margin: 10px;
+  font-size: 30px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.contact-box li :hover {
+  color: rgb(183, 175, 175);
+}
+
+.contact-box li :active {
+  color: black;
+}
+
+@media (min-width: 900px){
+  .footer-box {
+    font-size: 18px;
+  }
+  
+  .contact-box li {
+    font-size: 40px;
+  }
+}

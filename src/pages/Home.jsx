@@ -1,18 +1,14 @@
 // componenti
-import SearchBar from '../components/SearchBar';
-import Recipes from '../components/Recipes';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer'
+import MainCont from "../components/MainCont/MainCont";
+import Recipes from "../components/Recipes/Recipes";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   return (
     <>
-      <NavBar />
-      <SearchBar />
-      <div id='section-2' className='body-cont'>
-        <Recipes></Recipes>
-      </div>
-      <Footer></Footer>
+      <MainCont />
+      <Recipes />
+      <Footer />
     </>
   )
 }

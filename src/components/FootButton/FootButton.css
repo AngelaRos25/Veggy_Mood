@@ -1,0 +1,25 @@
+.return-icon {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.back, 
+.top {
+  font-size: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back svg, 
+.top svg {
+  cursor: pointer;
+}
+
+.back p, 
+.top p {
+  font-weight: 900;
+  text-align: center;
+  font-size: 15px;
+}
