@@ -8,7 +8,7 @@ import ShowRecipeDetails from "./ShowRecipeDetails";
 function Pages() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/Veggy_Mood/" element={<Home />} />
       <Route path="search/:search" element={<Searched />} />
       <Route path="search/recipe/:id" element={<ShowRecipeDetails />} />
     </Routes>

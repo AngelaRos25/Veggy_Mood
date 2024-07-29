@@ -17,7 +17,7 @@ function FootButton() {
           if (id) {
             navigate(-1);
           } else {
-            navigate("/", {
+            navigate("/Veggy_Mood/", {
               replace: true,
             });
           }
