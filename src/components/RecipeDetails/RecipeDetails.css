@@ -4,11 +4,13 @@
   justify-content: center;
   align-items: center;
   margin: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .title-recipe-details {
   color: black;
-  text-shadow: 2px 2px 0px #ffbc6d;
+  text-shadow: 3px 3px 0px #ffbc6d;
   text-align: center;
 }
 
@@ -79,10 +81,6 @@
   .box-details-card {
     display: flex;
     flex-direction: row;
-  }
-
-  .title-recipe-details {
-    text-shadow: 5px 5px 0px #ffbc6d;
   }
 
   .summary-recipe {
