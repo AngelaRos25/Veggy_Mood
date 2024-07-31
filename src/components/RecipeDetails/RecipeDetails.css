@@ -8,7 +8,7 @@
 
 .title-recipe-details {
   color: black;
-  text-shadow: 5px 5px 0px #ffbc6d;
+  text-shadow: 3px 3px 0px #ffbc6d;
   text-align: center;
 }
 
@@ -79,7 +79,10 @@
   .box-details-card {
     display: flex;
     flex-direction: row;
-    align-items: center;
+  }
+
+  .title-recipe-details {
+    text-shadow: 5px 5px 0px #ffbc6d;
   }
 
   .summary-recipe {
@@ -89,7 +92,6 @@
   .box-in {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: start;
     margin: 15px;
 

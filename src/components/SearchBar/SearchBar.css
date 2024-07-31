@@ -1,6 +1,6 @@
 h1 {
   color: #ffbc6d;
-  text-shadow: 5px 5px 0px #64090a;
+  text-shadow: 3px 3px 0px #64090a;
   margin-bottom: 15px;
   font-size: 34px;
   font-weight: 900;
@@ -41,6 +41,7 @@ form {
 @media (min-width: 900px) {
   h1 {
     font-size: 55px;
+    text-shadow: 5px 5px 0px #64090a;
   }
   
   form {
