@@ -9,40 +9,40 @@ import healthy from '../../image/icon/heartbeat.png'
 import "../Badge/Badge.css";
 
 // eslint-disable-next-line react/prop-types
-function Badge({vegan, vegetarian, glutenFree, dairyFree, veryHealthy}) {
+function Badge({ vegan, vegetarian, glutenFree, dairyFree, veryHealthy }) {
   return (
     <>
       <ul className='list'>
         {vegan ? (
-          <div  className='badge-box'>
+          <div className='badge-box'>
             <img src={veg} alt="" />
             <li>vegan</li>
           </div>
-        ):null}
+        ) : null}
         {vegetarian ? (
           <div className='badge-box'>
             <img src={vegetarianIco} alt="" />
             <li>vegetarian</li>
           </div>
-        ):null}
+        ) : null}
         {glutenFree ? (
           <div className='badge-box'>
             <img src={gluten} alt="" />
             <li>glutenFree</li>
           </div>
-        ):null}
+        ) : null}
         {dairyFree ? (
           <div className='badge-box'>
             <img src={dairy} alt="" />
             <li>dairyFree</li>
           </div>
-        ):null}
-        {veryHealthy? (
+        ) : null}
+        {veryHealthy ? (
           <div className='badge-box'>
             <img src={healthy} alt="" />
             <li>veryHealthy</li>
           </div>
-        ):null}
+        ) : null}
       </ul>
     </>
   )
