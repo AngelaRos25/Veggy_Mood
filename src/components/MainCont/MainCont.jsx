@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 // css
 import '../MainCont/MainCont.css';
 
@@ -12,7 +14,9 @@ function MainCont() {
     <div className='main'>
       <div className='main-image'></div>
       <div className='main-content'>
-        <img className='logo' src={logo} alt="" />
+        <Link to={'/Veggy_Mood/'}>
+          <img className='logo' src={logo} alt="" />
+        </Link>
         <SearchBar></SearchBar>
       </div>
     </div>
