@@ -13,5 +13,11 @@
 }
 
 .badge-box img {
-  width: 40px;
+  width: 30px;
 }
+
+
+@media (min-width: 900px) {
+.badge-box img {
+  width: 40px;
+}}

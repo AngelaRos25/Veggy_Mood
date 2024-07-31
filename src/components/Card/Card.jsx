@@ -10,7 +10,7 @@ import "../Card/Card.css";
 function Card({ id, image, title, vegan, vegetarian, glutenFree, dairyFree, veryHealthy }) {
   return (
     <div className="card-box" key={id}>
-      <img className="image-recipe" src={image} alt="" />
+      <img className="image-recipe" src={image} alt={title} />
       <Badge
         vegan={vegan}
         vegetarian={vegetarian}
@@ -20,7 +20,7 @@ function Card({ id, image, title, vegan, vegetarian, glutenFree, dairyFree, very
       />
       <h2>{title}</h2>
       <div className="button-box">
-        <Link to={`/search/recipe/${id}`}>
+        <Link to={`/Veggy_Mood/search/recipe/${id}`}>
           <button>View Recipe</button>
         </Link>
       </div>

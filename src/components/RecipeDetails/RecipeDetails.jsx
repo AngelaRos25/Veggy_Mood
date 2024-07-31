@@ -5,6 +5,7 @@ import axios from "axios";
 // componenti 
 import DetailsCard from "../DetailsCard/DetailsCard";
 import FootButton from "../FootButton/FootButton";
+import Loader from "../Loader/Loader";
 
 // css
 import "../RecipeDetails/RecipeDetails.css"
@@ -12,6 +13,7 @@ import "../RecipeDetails/RecipeDetails.css"
 export default function RecipeDetails() {
   let { id } = useParams();
   const [details, setDetails] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getDetails = async () => {
@@ -24,39 +26,53 @@ export default function RecipeDetails() {
         console.log(error)
       }
     }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000)
     getDetails()
   }, [id]);
 
   return (
     <div className="recipe-details-box">
-      <h1 className="title-recipe-details">{details.title}</h1>
-      <div className="box-details-card">
-        <DetailsCard
-          image={details.image}
-          vegan={details.vegan}
-          vegetarian={details.vegetarian}
-          glutenFree={details.glutenFree}
-          dairyFree={details.dairyFree}
-          veryHealthy={details.veryHealthy}
-          readyInMinutes={details.readyInMinutes}
-          servings={details.servings}
-        />
-        <div className="summary-recipe">
-          <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+      {isLoading ? (
+        <div>
+          <Loader />
         </div>
-      </div>
-      <div className="ingredient">
-        <h2>Ingredients:</h2>
-        <ol>
-          {details.extendedIngredients?.map((ingredient) => (
-            <li key={ingredient.id}>{ingredient.original}</li>
-          ))}
-        </ol>
-      </div>
-      <div className="instructions">
-        <h2>Instructions:</h2>
-        <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
-      </div>
+      ) : (
+        <>
+          <h1 className="title-recipe-details">{details.title}</h1>
+          <div className="box-details-card">
+            <DetailsCard
+              image={details.image}
+              vegan={details.vegan}
+              vegetarian={details.vegetarian}
+              glutenFree={details.glutenFree}
+              dairyFree={details.dairyFree}
+              veryHealthy={details.veryHealthy}
+              readyInMinutes={details.readyInMinutes}
+              servings={details.servings}
+            />
+            <div className="summary-recipe">
+              <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+            </div>
+          </div>
+          <div className="box-in">
+            <div className="ingredient">
+              <h2>Ingredients:</h2>
+              <ol>
+                {details.extendedIngredients?.map((ingredient) => (
+                  <li key={ingredient.id}>{ingredient.original}</li>
+                ))}
+              </ol>
+            </div>
+            <div className="instructions">
+              <h2>Instructions:</h2>
+              <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
+            </div>
+          </div>
+        </>
+      )}
+
       <FootButton />
     </div>
   )

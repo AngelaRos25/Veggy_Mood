@@ -22,10 +22,19 @@
 
 
 .summary-recipe {
-  width: 80%;
+  padding: 1%;
+  width: 100%;
+}
+
+.box-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ingredient {
+  margin: 10px;
   text-align: center;
 }
 
@@ -38,8 +47,8 @@
   display: grid;
   justify-items: center;
   align-content: center;
-  font-size: 17px;
-  row-gap: 10px;
+  font-size: 15px;
+  row-gap: 5px;
 
   margin: 20px;
 }
@@ -50,13 +59,13 @@
 }
 
 .instructions {
-  width: 80%;
+  width: 90%;
   margin: 10px;
 }
 
 .summary-recipe p,
 .instructions p {
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -74,27 +83,49 @@
   }
 
   .summary-recipe {
-    width: 40%;
+    width: 30%;
   }
 
+  .box-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    margin: 15px;
 
-  .box-ingredient-recipe {
-    width: 50%;
   }
 
   .ingredient {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: start;
+  }
+
+  .ingredient ol {
+    font-size: 17px;
+    justify-items: start;
   }
 
 
   .ingredient li,
   .instructions li {
-    text-align: center;
+    text-align: start;
     width: fit-content;
   }
 
   .instructions {
-    width: 65%;
+    width: 30%;
   }
+
+  .summary-recipe p,
+.instructions p {
+  font-size: 17px;
+}
+
+.instructions h2,
+.ingredient h2 {
+  text-align: start;
+}
 
 }

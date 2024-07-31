@@ -12,7 +12,7 @@ function SearchBar() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate(`/search/${id}`);
+    navigate(`/Veggy_Mood/search/${id}`);
   }
   return (
     <>
