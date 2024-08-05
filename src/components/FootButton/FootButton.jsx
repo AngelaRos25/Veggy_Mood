@@ -10,18 +10,21 @@ function FootButton() {
   const navigate = useNavigate();
   const { id } = useParams();
 
+
+  const handleClick = () => {
+    if (id) {
+      navigate(-1);
+    } else {
+      navigate("/Veggy_Mood/", {
+        replace: true,
+      });
+    }
+  }
+
   return (
     <div className="return-icon">
       <div className="back"
-        onClick={() => {
-          if (id) {
-            navigate(-1);
-          } else {
-            navigate("/Veggy_Mood/", {
-              replace: true,
-            });
-          }
-        }}>
+        onClick={handleClick}>
         <TbSquareRoundedArrowLeftFilled />
         <p>back</p>
       </div>

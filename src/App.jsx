@@ -4,10 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 // stile
 import "./App.css";
 
+// componenti
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
+
 function App() {
   return (
     <div className="app">
       <BrowserRouter >
+        <ScrollToTop />
         <Pages />
       </BrowserRouter>
     </div>
