@@ -3,12 +3,12 @@
 ## Why?
 This project is the final practivce for Start2Impact React.js course. 
 
-##Languages
+## Languages
 - HTML5
 - CSS
 - JAVASCRIPT ES6
 
-##Libraries
+## Libraries
 - React.js
 - React Router
 - axios
