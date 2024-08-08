@@ -20,7 +20,7 @@ function Recipes() {
         console.log(data);
         setGetReacipe(data.recipes)
       } catch (error) {
-        console.log(error)
+        console.log('Failed to feth data', error)
       }
     }
     setTimeout(() => {

@@ -23,7 +23,7 @@ export default function RecipeDetails() {
         console.log(recipeData);
         setDetails(recipeData);
       } catch (error) {
-        console.log(error)
+        console.log('Failed to feth data', error)
       }
     }
     setTimeout(() => {
