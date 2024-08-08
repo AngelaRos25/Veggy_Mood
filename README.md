@@ -14,8 +14,11 @@ This project is the final practivce for Start2Impact React.js course.
 - axios
 - React Icons
 
-  ##External Services
-  - [Spoonacular API](https://spoonacular.com/food-api/docs)
+## External Services
+- [Spoonacular API](https://spoonacular.com/food-api/docs)
+
+## Try It!
+[Veggy Mood](https://giangy25.github.io/Veggy_Mood/)
  
 
 
