@@ -4,9 +4,9 @@
 This project is the final practivce for Start2Impact React.js course. 
 
 ## Languages
-- HTML5
-- CSS
-- JAVASCRIPT ES6
+- HTML5[![My Skills](https://skillicons.dev/icons?i=html)]
+- CSS[![My Skills](https://skillicons.dev/icons?i=css)]
+- JAVASCRIPT ES6[![My Skills](https://skillicons.dev/icons?i=js)]
 
 ## Libraries
 - React.js
