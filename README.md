@@ -6,9 +6,9 @@ and in the home page you wil find a "today picks" recipes.
 This project is the final practice for Start2Impact React.js course. 
 
 ## Languages
-![My Skills](https://skillicons.dev/icons?i=html) HTML5
-![My Skills](https://skillicons.dev/icons?i=css) CSS
-![My Skills](https://skillicons.dev/icons?i=js) JAVASCRIPT ES6
+- ![My Skills](https://skillicons.dev/icons?i=html) HTML5
+- ![My Skills](https://skillicons.dev/icons?i=css) CSS
+- ![My Skills](https://skillicons.dev/icons?i=js) JAVASCRIPT ES6
 
 ## :books: Libraries
 - React.js
