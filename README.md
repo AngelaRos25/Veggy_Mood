@@ -1,4 +1,4 @@
-# :avocado: Veggy Mood :avocado:
+# :broccoli: Veggy Mood :avocado:
 In this website you can search different veggy recipes 
 and in the home page you wil find a "today picks" recipes.
 
