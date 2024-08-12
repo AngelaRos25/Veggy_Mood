@@ -1,6 +1,6 @@
 # Veggy Mood :avocado:
 
-## Why?
+:question: ## Why?
 This project is the final practivce for Start2Impact React.js course. 
 
 ## Languages
