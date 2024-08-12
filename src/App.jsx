@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 // componenti
-import ScrollToTop from "./ScrollToTop/ScrollToTop";
+import ScrollToTop from "../src/components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
