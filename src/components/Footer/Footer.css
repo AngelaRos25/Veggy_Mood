@@ -37,11 +37,11 @@
   color: black;
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
   .footer-box {
     font-size: 18px;
   }
-  
+
   .contact-box li {
     font-size: 40px;
   }

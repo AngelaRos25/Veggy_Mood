@@ -18,6 +18,7 @@
 
 
 @media (min-width: 900px) {
-.badge-box img {
-  width: 40px;
-}}
+  .badge-box img {
+    width: 40px;
+  }
+}

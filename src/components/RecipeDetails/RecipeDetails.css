@@ -120,13 +120,13 @@
   }
 
   .summary-recipe p,
-.instructions p {
-  font-size: 17px;
-}
+  .instructions p {
+    font-size: 17px;
+  }
 
-.instructions h2,
-.ingredient h2 {
-  text-align: start;
-}
+  .instructions h2,
+  .ingredient h2 {
+    text-align: start;
+  }
 
 }

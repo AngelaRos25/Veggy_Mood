@@ -38,9 +38,9 @@
   .details-card {
     width: 30%;
   }
-  
-.details-minutes,
-.details-servings {
-  font-size: 17px;
-}
+
+  .details-minutes,
+  .details-servings {
+    font-size: 17px;
+  }
 }
