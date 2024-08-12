@@ -1,13 +1,14 @@
 # :avocado: Veggy Mood :avocado:
-In this website you can search different veggy recipes and in the home page you wil find a "today picks" recipes.
+In this website you can search different veggy recipes 
+and in the home page you wil find a "today picks" recipes.
 
  ## :question: Why?
 This project is the final practice for Start2Impact React.js course. 
 
 ## Languages
-- ![My Skills](https://skillicons.dev/icons?i=html) HTML5
-- ![My Skills](https://skillicons.dev/icons?i=css) CSS
-- ![My Skills](https://skillicons.dev/icons?i=js) JAVASCRIPT ES6
+![My Skills](https://skillicons.dev/icons?i=html) HTML5
+![My Skills](https://skillicons.dev/icons?i=css) CSS
+![My Skills](https://skillicons.dev/icons?i=js) JAVASCRIPT ES6
 
 ## :books: Libraries
 - React.js
@@ -19,7 +20,7 @@ This project is the final practice for Start2Impact React.js course.
 - [Spoonacular API](https://spoonacular.com/food-api/docs)
 
 ## :muscle: Try It!
-you can try it here: [Veggy Mood](https://giangy25.github.io/Veggy_Mood/)
+You can try it here: [Veggy Mood](https://giangy25.github.io/Veggy_Mood/)
 
 ## :envelope: Contact
 [![Instagram](https://skillicons.dev/icons?i=instagram)](https://www.instagram.com/angiirosi/)
