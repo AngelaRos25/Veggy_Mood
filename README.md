@@ -21,7 +21,7 @@ This project is the final practice for Start2Impact React.js course.
 - [Spoonacular API](https://spoonacular.com/food-api/docs)
 
 ## :muscle: Try It!
-You can try it here: [Veggy Mood](https://giangy25.github.io/Veggy_Mood/)
+You can try it here: [Veggy Mood](https://angelaros25.github.io/Veggy_Mood/)
 
 ## :envelope: Contact
 [![Instagram](https://skillicons.dev/icons?i=instagram)](https://www.instagram.com/angiirosi/)
